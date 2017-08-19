@@ -1,0 +1,29 @@
+#include "Logic.h"
+
+class logicData : public QSharedData
+{
+public:
+
+};
+
+logic::logic() : data(new logicData)
+{
+
+}
+
+logic::logic(const logic &rhs) : data(rhs.data)
+{
+
+}
+
+logic &logic::operator=(const logic &rhs)
+{
+    if (this != &rhs)
+        data.operator=(rhs.data);
+    return *this;
+}
+
+logic::~logic()
+{
+
+}
